@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0q!p3()$p35u=gsr+k=ta+smp2klfilu%m)*5w1deefit%^t^o
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'elwanex-survey-app.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://test-api-q38n.onrender.com']
 
 
 
