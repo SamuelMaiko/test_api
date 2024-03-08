@@ -378,3 +378,9 @@ class UserLoanInfoView(generics.RetrieveAPIView):
 
     def get_object(self):        
         return self.request.user
+    
+
+class JustTesting(APIView):
+    def get(request):
+        response_dict=dict(message="Wow the API is deployed", the_deployer="Samuel Maiko - Junior Software Engineer")
+        return JsonResponse(response_dict, status=status.HTTP_200_OK)

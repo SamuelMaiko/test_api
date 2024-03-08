@@ -16,4 +16,5 @@ urlpatterns=[
     path('repayments/', views.LoanRepaymentView.as_view(), name='repayments'),
     path('transactions/', views.LoanTransactionView.as_view(), name='transaction-list'),
     path('user-loan-info/', views.UserLoanInfoView.as_view(), name='user-loan-info'),
+    path('testing/', views.JustTesting.as_view(), name='testing'),
 ]
