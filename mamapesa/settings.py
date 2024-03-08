@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-0q!p3()$p35u=gsr+k=ta+smp2klfilu%m)*5w1deefit%^t^o
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://test-api-q38n.onrender.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost',]
+ALLOWED_HOSTS = []
 
 
 
@@ -49,8 +50,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,21 +85,7 @@ WSGI_APPLICATION = 'mamapesa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-#     #     'ENGINE': 'django.db.backends.sqlite3',
-#     # 'default': {
-#     #     'ENGINE': 'django.db.backends.postgresql',
-#     #     'NAME': 'railway',
-#     #     'USER': 'postgres',
-#     #     'PASSWORD': '1cdA3E2A3bccbcDegEEbbgbe1b6dC552',
-#     #     'HOST': 'viaduct.proxy.rlwy.net',
-#     #     'PORT': '22761',
-#     # }
-# }
+
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -114,17 +101,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'mamapesa',
-#         'USER':'root',
-#         'PASSWORD':'Sleepylynn@1',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
 
 
 # Password validation
@@ -161,8 +137,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-
+STATIC_URL = '/static/'
+STATTC_ROOT=BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -170,7 +147,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'Mamapesa__media'
 
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AUTH_USER_MODEL='newmamapesa.CustomUser'
 
